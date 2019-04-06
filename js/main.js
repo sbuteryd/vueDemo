@@ -2,6 +2,7 @@ var app = new Vue({
     el:'#app',
     data:{
         product:'socks',
-        image:'./assets/vmSocks-green-onWhite.jpg'
+        image:'./assets/vmSocks-green-onWhite.jpg',
+        inStock:true,
     }
 })
