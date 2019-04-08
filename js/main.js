@@ -2,7 +2,9 @@ var app = new Vue({
     el:'#app',
     data:{
         product:'socks',
-        image:'./assets/vmSocks-green-onWhite.jpg',
+        brand:'Vue Master',
+        // image:'./assets/vmSocks-green-onWhite.jpg',
+        selectedVariant:0,
         inStock:true,
         details:["80% cotton","20% polyester","Gender-neutral"],
         variants:[
@@ -24,9 +26,14 @@ var app = new Vue({
         addToCart:function(){
             this.cart += 1
         },
-        updateProduct(variantImage){
-            console.log(variantImage)
-            this.image = variantImage
+        updateProduct(index){
+            this.selectedVariant = index
+            console.log(index)
+        }
+    },
+    computed:{
+        title() {
+            return `${this.brand} ${this.product}`
         }
     }
 })
