@@ -42,4 +42,9 @@ var app = new Vue({
             return this.variants[this.selectedVariant].variantQuantity
         }
     }
+});
+
+Vue.component('product',{
+    template:`<div>{{message}}</div>>`,
+
 })
